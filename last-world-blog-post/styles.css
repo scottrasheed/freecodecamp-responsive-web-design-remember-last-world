@@ -1,0 +1,654 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      #3b2b25,
+      #14100f 45%,
+      #050505 100%
+    );
+
+  color: #e8dfca;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+
+/* =========================================
+   BLOG CARD
+========================================= */
+
+.blog-post-card {
+  width: min(720px, 100%);
+
+  overflow: hidden;
+
+  background: #101211;
+
+  border: 1px solid #716344;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.85);
+}
+
+
+/* =========================================
+   ASHFALL ENVIRONMENT
+========================================= */
+
+.post-img {
+  position: relative;
+
+  width: 100%;
+
+  height: 390px;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid #806b45;
+}
+
+.ashfall-scene {
+  background:
+    linear-gradient(
+      to bottom,
+      #08090b 0%,
+      #171515 28%,
+      #3a2922 58%,
+      #19120e 78%,
+      #090807 100%
+    );
+}
+
+
+/* =========================================
+   VOLCANIC SKY
+========================================= */
+
+.sky {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 68%,
+      rgba(239, 91, 25, 0.55),
+      transparent 28%
+    ),
+    radial-gradient(
+      ellipse at 25% 50%,
+      rgba(164, 56, 25, 0.24),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 80% 55%,
+      rgba(178, 65, 24, 0.2),
+      transparent 40%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(5, 6, 7, 0.8),
+      transparent 60%
+    );
+}
+
+
+/* =========================================
+   DISTANT VOLCANIC GLOW
+========================================= */
+
+.moon {
+  position: absolute;
+
+  top: 55px;
+  right: 16%;
+
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
+  background: #8e8270;
+
+  box-shadow:
+    0 0 35px rgba(203, 198, 174, 0.12);
+
+  opacity: 0.25;
+}
+
+
+/* =========================================
+   MOUNTAINS
+========================================= */
+
+.mountain {
+  position: absolute;
+
+  bottom: 90px;
+
+  width: 120%;
+
+  left: -10%;
+
+  clip-path: polygon(
+    0 100%,
+    8% 70%,
+    17% 84%,
+    27% 45%,
+    37% 72%,
+    49% 30%,
+    60% 73%,
+    72% 42%,
+    84% 76%,
+    94% 53%,
+    100% 70%,
+    100% 100%
+  );
+}
+
+.mountain-back {
+  height: 180px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #26201e,
+      #161414
+    );
+
+  opacity: 0.8;
+
+  filter: drop-shadow(
+    0 0 25px rgba(170, 52, 20, 0.18)
+  );
+}
+
+.mountain-middle {
+  height: 140px;
+
+  bottom: 65px;
+
+  transform: scaleX(1.15);
+
+  background:
+    linear-gradient(
+      to bottom,
+      #171414,
+      #0e0e0e
+    );
+}
+
+.mountain-front {
+  height: 105px;
+
+  bottom: 50px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #0e0d0c,
+      #080807
+    );
+}
+
+
+/* =========================================
+   VOLCANIC CRACKS
+========================================= */
+
+.embers {
+  position: absolute;
+
+  bottom: 55px;
+
+  left: 5%;
+
+  width: 90%;
+
+  height: 75px;
+
+  background:
+    linear-gradient(
+      102deg,
+      transparent 0 10%,
+      rgba(207, 67, 22, 0.8) 10.2%,
+      transparent 10.7% 25%,
+      rgba(234, 99, 27, 0.65) 25.2%,
+      transparent 25.7% 43%,
+      rgba(207, 65, 21, 0.7) 43.2%,
+      transparent 43.7% 63%,
+      rgba(239, 112, 30, 0.7) 63.2%,
+      transparent 63.7% 80%,
+      rgba(205, 64, 21, 0.75) 80.2%,
+      transparent 80.7%
+    );
+
+  filter:
+    blur(1px)
+    drop-shadow(
+      0 0 8px rgba(240, 78, 20, 0.7)
+    );
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   RUINED CITY
+========================================= */
+
+.city {
+  position: absolute;
+
+  bottom: 48px;
+  left: 8%;
+
+  width: 84%;
+  height: 115px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-around;
+}
+
+
+/* Buildings */
+
+.city span {
+  display: block;
+
+  width: 9%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #1a1715,
+      #090908
+    );
+
+  border-top:
+    2px solid rgba(92, 76, 61, 0.35);
+
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.9),
+    0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Different ruined buildings */
+
+.city span:nth-child(1) {
+  height: 55%;
+}
+
+.city span:nth-child(2) {
+  height: 85%;
+}
+
+.city span:nth-child(3) {
+  height: 62%;
+}
+
+.city span:nth-child(4) {
+  height: 100%;
+}
+
+.city span:nth-child(5) {
+  height: 72%;
+}
+
+.city span:nth-child(6) {
+  height: 48%;
+}
+
+.city span:nth-child(7) {
+  height: 78%;
+}
+
+
+/* =========================================
+   ANCIENT TOWER
+========================================= */
+
+.tower {
+  position: absolute;
+
+  bottom: 48px;
+
+  left: 47%;
+
+  width: 38px;
+
+  height: 155px;
+
+  background:
+    linear-gradient(
+      to right,
+      #080909,
+      #24201d,
+      #0a0a09
+    );
+
+  clip-path: polygon(
+    12% 100%,
+    12% 18%,
+    32% 18%,
+    32% 0,
+    68% 0,
+    68% 18%,
+    88% 18%,
+    88% 100%
+  );
+
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 18px rgba(205, 66, 22, 0.12);
+}
+
+
+/* =========================================
+   ROAD THROUGH THE ASH
+========================================= */
+
+.road {
+  position: absolute;
+
+  bottom: -10px;
+
+  left: 43%;
+
+  width: 14%;
+
+  height: 155px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(92, 70, 52, 0.08),
+      #15100c
+    );
+
+  clip-path: polygon(
+    43% 0,
+    57% 0,
+    100% 100%,
+    0 100%
+  );
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   FALLING VOLCANIC ASH
+========================================= */
+
+.ash-particles {
+  position: absolute;
+
+  inset: -50px;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(225, 221, 207, 0.75) 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle,
+      rgba(119, 112, 103, 0.7) 1.5px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle,
+      rgba(55, 49, 45, 0.8) 2px,
+      transparent 4px
+    );
+
+  background-size:
+    42px 36px,
+    75px 58px,
+    105px 92px;
+
+  transform: rotate(12deg);
+
+  opacity: 0.5;
+}
+
+
+/* =========================================
+   VOLCANIC ASH CLOUD
+========================================= */
+
+.fog {
+  position: absolute;
+
+  bottom: 35px;
+
+  left: -10%;
+
+  width: 120%;
+
+  height: 110px;
+
+  background:
+    radial-gradient(
+      ellipse at 30% 50%,
+      rgba(105, 96, 88, 0.25),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 70% 40%,
+      rgba(90, 82, 75, 0.22),
+      transparent 60%
+    );
+
+  filter: blur(10px);
+}
+
+
+/* =========================================
+   FIRE RELIC GLOW
+========================================= */
+
+.ashfall-scene::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 38px;
+
+  width: 34px;
+  height: 34px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #fff1bd 0%,
+      #ffb347 25%,
+      #e85824 48%,
+      rgba(196, 54, 20, 0.4) 65%,
+      transparent 72%
+    );
+
+  box-shadow:
+    0 0 15px rgba(255, 126, 38, 0.9),
+    0 0 35px rgba(226, 70, 20, 0.65),
+    0 0 70px rgba(198, 52, 16, 0.35);
+
+  opacity: 0.85;
+
+  z-index: 6;
+}
+
+
+/* =========================================
+   VIGNETTE
+========================================= */
+
+.scene-vignette {
+  position: absolute;
+
+  inset: 0;
+
+  box-shadow:
+    inset 0 0 120px rgba(0, 0, 0, 0.9),
+    inset 0 -50px 80px rgba(0, 0, 0, 0.75);
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.post-content {
+  padding: 38px;
+}
+
+
+.post-category {
+  margin: 0 0 14px;
+
+  color: #b7a26b;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.65rem;
+
+  font-weight: bold;
+
+  letter-spacing: 0.25em;
+}
+
+
+.post-title {
+  margin: 12px 0 18px;
+
+  color: #eee5d0;
+
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+
+  font-weight: normal;
+
+  line-height: 1.15;
+}
+
+
+.post-excerpt {
+  margin: 20px 0;
+
+  color: #9ca3a5;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+.post-meta {
+  margin: 20px 0;
+
+  color: #6f7779;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.read-more {
+  display: inline-block;
+
+  margin: 12px 0;
+
+  padding: 12px 22px;
+
+  border-radius: 6px;
+
+  background: #8d7745;
+
+  color: #100f0b;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: bold;
+
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.read-more:hover {
+  background: #c1a968;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .post-img {
+    height: 280px;
+  }
+
+  .post-content {
+    padding: 25px;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+  }
+}
