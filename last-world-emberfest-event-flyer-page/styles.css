@@ -1,0 +1,1015 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+
+/* =================================
+   GLOBAL
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  margin: 0 auto;
+
+  padding: 50px 0;
+
+  width: 90vw;
+
+  min-height: calc(100vh - 100px);
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(125, 40, 10, 0.2),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      180deg,
+      #02080d 0%,
+      #071219 45%,
+      #02080d 100%
+    );
+
+  color: #e8d4a4;
+
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+header {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 500px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px 30px;
+
+  background: #02080d;
+
+  border: 1px solid #8e5c24;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    inset 0 0 100px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =================================
+   HEADER IMAGE
+================================= */
+
+header > img {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.85;
+
+  filter:
+    brightness(0.75)
+    saturate(1.25)
+    contrast(1.05);
+
+  z-index: 0;
+}
+
+
+/* =================================
+   IMAGE BLENDING
+================================= */
+
+header::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+
+      rgba(2, 8, 13, 0.8) 0%,
+
+      rgba(2, 8, 13, 0.15) 28%,
+
+      rgba(2, 8, 13, 0.1) 60%,
+
+      rgba(2, 8, 13, 0.75) 88%,
+
+      #02080d 100%
+    ),
+
+    linear-gradient(
+      to right,
+
+      rgba(2, 8, 13, 0.75) 0%,
+
+      transparent 25%,
+
+      transparent 75%,
+
+      rgba(2, 8, 13, 0.75) 100%
+    );
+}
+
+
+/* =================================
+   FIRE ATMOSPHERE
+================================= */
+
+header::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+
+      rgba(255, 85, 15, 0.2),
+
+      transparent 45%
+    ),
+
+    radial-gradient(
+      ellipse at center,
+
+      transparent 45%,
+
+      rgba(2, 8, 13, 0.7) 100%
+    );
+}
+
+
+/* =================================
+   HEADER CONTENT
+================================= */
+
+.header-overlay {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+}
+
+
+header > h1 {
+
+  position: absolute;
+
+  z-index: 2;
+
+  margin: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #ffca65;
+
+  font-family: "Cinzel", serif;
+
+  font-size: clamp(3rem, 9vw, 7rem);
+
+  font-weight: 800;
+
+  letter-spacing: 8px;
+
+  text-shadow:
+
+    0 0 10px #ff7a19,
+
+    0 0 25px rgba(255, 78, 0, 0.7),
+
+    0 0 50px rgba(255, 60, 0, 0.4);
+}
+
+
+/* =================================
+   EVENT LABEL
+================================= */
+
+.event-label {
+
+  margin: 0 0 170px;
+
+  padding: 10px 35px;
+
+  border: 1px solid #d89a3b;
+
+  background: rgba(67, 22, 14, 0.85);
+
+  color: #f0c46c;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 4px;
+
+  box-shadow:
+    0 0 20px rgba(255, 90, 20, 0.15);
+}
+
+
+/* =================================
+   TAGLINE
+================================= */
+
+.tagline {
+
+  margin: 150px 0 20px;
+
+  color: #f3dfb0;
+
+  font-family: "Cinzel", serif;
+
+  font-size: clamp(0.9rem, 2vw, 1.4rem);
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 2px 8px #000;
+}
+
+
+/* =================================
+   EVENT DATE
+================================= */
+
+.event-date {
+
+  margin: 0;
+
+  color: #f1c36a;
+
+  font-family: "Cinzel", serif;
+
+  font-size: clamp(1rem, 2vw, 1.5rem);
+
+  letter-spacing: 3px;
+
+  text-shadow:
+    0 2px 8px #000;
+}
+
+
+/* =================================
+   GENERAL
+================================= */
+
+h2,
+h3 {
+
+  font-family: "Cinzel", serif;
+}
+
+h2 {
+
+  color: #e7b75c;
+
+  letter-spacing: 3px;
+}
+
+h3 {
+
+  color: #e8c77e;
+}
+
+p {
+
+  line-height: 1.7;
+}
+
+hr {
+
+  width: 90%;
+
+  border: 0;
+
+  border-top: 1px solid #68471f;
+
+  margin: 35px auto;
+}
+
+
+/* =================================
+   INTRO
+================================= */
+
+.intro {
+
+  width: 85%;
+
+  margin: 30px auto;
+
+  padding: 25px;
+
+  text-align: center;
+
+  border: 1px solid #70491e;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 27, 33, 0.95),
+      rgba(5, 13, 18, 0.95)
+    );
+
+  font-family: "Cinzel", serif;
+
+  font-size: 1rem;
+}
+
+.intro strong {
+
+  color: #e47732;
+}
+
+
+/* =================================
+   EVENT SECTIONS
+================================= */
+
+.event-content {
+
+  width: 95%;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.35fr;
+
+  gap: 20px;
+}
+
+.event-content > div,
+.join > div {
+
+  border: 1px solid #79501f;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8, 19, 26, 0.98),
+      rgba(3, 10, 15, 0.98)
+    );
+}
+
+.highlights,
+.rewards {
+
+  padding: 25px;
+}
+
+.highlights h2,
+.rewards h2 {
+
+  text-align: center;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #65431e;
+}
+
+
+/* =================================
+   HIGHLIGHTS
+================================= */
+
+.highlights article {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(126, 83, 29, 0.4);
+}
+
+.highlights article:last-child {
+
+  border-bottom: 0;
+}
+
+.icon {
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 55px;
+
+  height: 55px;
+
+  border: 1px solid #a96824;
+
+  border-radius: 8px;
+
+  background:
+    radial-gradient(
+      circle,
+      #75210e,
+      #170d0a
+    );
+
+  color: #ff9d3d;
+
+  font-size: 1.5rem;
+
+  box-shadow:
+    0 0 15px rgba(255, 80, 10, 0.2);
+}
+
+.highlights h3 {
+
+  margin: 0 0 5px;
+
+  font-size: 1rem;
+}
+
+.highlights p {
+
+  margin: 0;
+
+  font-size: 0.85rem;
+
+  color: #b9aa8d;
+}
+
+small {
+
+  padding: 3px 6px;
+
+  background: #69210f;
+
+  color: #eab86b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 0.55rem;
+}
+
+
+/* =================================
+   REWARDS
+================================= */
+
+.reward-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.reward-card {
+
+  text-align: center;
+}
+
+.reward-image {
+
+  height: 155px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #70461d;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(154, 52, 18, 0.7),
+      #071015 70%
+    );
+
+  font-size: 4rem;
+
+  text-shadow:
+    0 0 15px #ff721d,
+    0 0 30px #9d270e;
+}
+
+.reward-card h3 {
+
+  margin: 12px 0 2px;
+
+  font-size: 0.75rem;
+}
+
+.reward-card p {
+
+  margin: 0;
+
+  color: #9f9075;
+
+  font-size: 0.7rem;
+}
+
+
+/* =================================
+   BONUS REWARDS
+================================= */
+
+.more-rewards {
+
+  margin-top: 20px;
+
+  border: 1px solid #6b451d;
+}
+
+.more-rewards > h3 {
+
+  margin: 0;
+
+  padding: 8px;
+
+  text-align: center;
+
+  background: #35150c;
+
+  font-size: 0.9rem;
+}
+
+.bonus-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.bonus-grid div {
+
+  padding: 15px 5px;
+
+  text-align: center;
+
+  border-right: 1px solid #49351e;
+}
+
+.bonus-grid div:last-child {
+
+  border-right: 0;
+}
+
+.bonus-grid span {
+
+  font-size: 1.5rem;
+
+  color: #d79032;
+}
+
+.bonus-grid p {
+
+  margin: 5px 0 0;
+
+  font-size: 0.65rem;
+}
+
+
+/* =================================
+   HOW TO JOIN
+================================= */
+
+.join {
+
+  width: 95%;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 20px;
+}
+
+.steps {
+
+  padding: 25px;
+}
+
+.steps h2 {
+
+  text-align: center;
+}
+
+.step {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 25px 0;
+}
+
+.step span {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 45px;
+
+  height: 45px;
+
+  border: 1px solid #a66c26;
+
+  border-radius: 50%;
+
+  color: #e7ad4d;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 1.2rem;
+}
+
+.step p {
+
+  margin: 0;
+
+  color: #b9aa8d;
+
+  font-size: 0.85rem;
+}
+
+.step strong {
+
+  color: #e5c47b;
+}
+
+
+/* =================================
+   CALL TO ACTION
+================================= */
+
+.cta {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 320px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(151, 48, 10, 0.45),
+      transparent 45%
+    ),
+
+    linear-gradient(
+      135deg,
+      #111b20,
+      #080d11
+    );
+}
+
+.relic-symbol {
+
+  width: 90px;
+
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 2px solid #d28a2d;
+
+  color: #ff9d27;
+
+  font-size: 3rem;
+
+  transform: rotate(45deg);
+
+  box-shadow:
+
+    0 0 20px rgba(255, 100, 20, 0.5),
+
+    inset 0 0 20px rgba(255, 100, 20, 0.2);
+}
+
+.cta h2 {
+
+  margin: 35px 0 25px;
+
+  color: #e7d4a9;
+
+  font-size: clamp(1.2rem, 3vw, 2rem);
+
+  letter-spacing: 3px;
+}
+
+.play-button {
+
+  display: inline-block;
+
+  padding: 14px 40px;
+
+  border: 1px solid #d39535;
+
+  background:
+    linear-gradient(
+      180deg,
+      #54210e,
+      #250d08
+    );
+
+  color: #f2cb78;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 0.95rem;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.play-button:hover {
+
+  background: #7c2b12;
+
+  color: white;
+
+  box-shadow:
+    0 0 20px rgba(255, 104, 20, 0.5);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+
+  width: 95%;
+
+  margin: 45px auto 0;
+
+  padding: 30px 20px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid #54381c;
+
+  text-align: center;
+}
+
+.footer-brand h2 {
+
+  margin: 0 0 10px;
+
+  color: #d9bc80;
+
+  letter-spacing: 3px;
+}
+
+.footer-brand p {
+
+  margin: 3px;
+
+  color: #9f8e70;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 2px;
+}
+
+.socials {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  color: #857968;
+
+  font-size: 1.2rem;
+}
+
+.socials span {
+
+  transition: 0.2s;
+}
+
+.socials span:hover {
+
+  color: #e39b3e;
+}
+
+.copyright {
+
+  grid-column: 1 / -1;
+
+  margin: 30px 0 0;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #2d2520;
+
+  color: #655b50;
+
+  font-size: 0.7rem;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 850px) {
+
+  .event-content,
+  .join {
+
+    grid-template-columns: 1fr;
+  }
+
+  .reward-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  body {
+
+    width: 95vw;
+  }
+
+  header {
+
+    min-height: 450px;
+
+    padding: 25px 15px;
+  }
+
+  header > img {
+
+    height: 100%;
+  }
+
+  header > h1 {
+
+    font-size: 3rem;
+
+    letter-spacing: 3px;
+  }
+
+  .event-label {
+
+    margin-bottom: 140px;
+
+    padding: 8px 20px;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+
+    margin-top: 130px;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+  }
+
+  .event-date {
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+  }
+
+  .event-content,
+  .join {
+
+    width: 100%;
+  }
+
+  .reward-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .bonus-grid {
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bonus-grid div {
+
+    border-bottom: 1px solid #49351e;
+  }
+
+  footer {
+
+    grid-template-columns: 1fr;
+  }
+
+  .socials {
+
+    margin-top: 25px;
+  }
+}
